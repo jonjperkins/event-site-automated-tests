@@ -1,0 +1,1 @@
+This project holds the automated tests for my event hosting application. The tests use page objects to test the individual scenarios.
