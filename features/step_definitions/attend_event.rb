@@ -1,17 +1,10 @@
-
-	@login = Login.new
-	@login.load
-	@login.log_in
-
 Given(/^I navigate to the page of an event I didn't create while logged in$/) do
   @login = Login.new
 	@login.load
 	@login.log_in
-  @event_index = EventIndex.new
-  @event_index.load
-  @event_index.test_event.click
   @test_page = TestPage.new
   @test_page.load
+  expect(@test_page).to be_displayed
 end
 
 When(/^I choose to attend the event$/) do
